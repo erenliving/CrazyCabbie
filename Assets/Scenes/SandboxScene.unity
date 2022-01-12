@@ -399,11 +399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15bdaf2ad9ad6d4c8de7d4c2113ae13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulseMinX: 0
-  impulseMaxX: 5
-  impulseMinZ: 0
-  impulseMaxZ: 5
-  impulseY: 5
+  impulseRangeX: 2
+  impulseRangeZ: 2
+  impulseY: 3
 --- !u!54 &950279862
 Rigidbody:
   m_ObjectHideFlags: 0
