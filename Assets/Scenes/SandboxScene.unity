@@ -263,7 +263,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3745319, y: 1}
+    m_SensorSize: {x: 1.5270457, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -280,7 +280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883908985}
   m_LocalRotation: {x: 0.098537624, y: 0.0000000042806607, z: -4.238689e-10, w: 0.99513334}
-  m_LocalPosition: {x: 500, y: 2.5, z: 490}
+  m_LocalPosition: {x: 500, y: 3, z: 490}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -380,7 +380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950279856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500, y: 0.5, z: 500}
+  m_LocalPosition: {x: 500, y: 1, z: 500}
   m_LocalScale: {x: 2, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -399,9 +399,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15bdaf2ad9ad6d4c8de7d4c2113ae13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impulseRangeX: 2
-  impulseRangeZ: 2
-  impulseY: 3
+  ImpulseRangeX: 2
+  ImpulseRangeZ: 2
+  ImpulseY: 1
+  SuspensionLength: 1.5
+  SuspensionStrength: 100
+  SuspensionDampening: 10
 --- !u!54 &950279862
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -496,7 +499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.098537624, y: 0.0000000042806607, z: -4.238689e-10, w: 0.99513334}
-  m_LocalPosition: {x: 500, y: 2.5, z: 490}
+  m_LocalPosition: {x: 500, y: 3, z: 490}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
