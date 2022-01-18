@@ -10,10 +10,14 @@ public class CarController : MonoBehaviour
     public float SuspensionLength = 0.0f;
     public float SuspensionStrength = 0.0f;
     public float SuspensionDampening = 0.0f;
+    public float MaxMotorTorque = 0.0f;
+    public float MaxSteeringAngle = 0.0f;
 
     private Rigidbody carBody;
     private float carMass;
     private Vector3 extents;
+    private float verticalInput;
+    private float horizontalInput;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +33,8 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TODO: get Input horizontal and vertical amounts
+        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("Horizontal");
 
         // Debug button to flip car
         if (Input.GetKeyDown(KeyCode.Space))
@@ -110,6 +115,11 @@ public class CarController : MonoBehaviour
         }
 
         // TODO: apply Input controls and gas/brake/reverse physics
+        float motor = MaxMotorTorque * verticalInput;
+        float steering = MaxSteeringAngle * horizontalInput;
+        carBody.AddForce(transform.forward * motor, ForceMode.Acceleration);
+        carBody.AddForce(transform.right * steering, ForceMode.Force);
+
     }
 
     private float CalculateDampenedSpringForce(float x, float velocity)
